@@ -1,0 +1,42 @@
+.title {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -.3px;
+}
+
+.image-dark-opacity {
+    opacity: 0.3;
+    height: 119px;
+}
+
+.title {
+    opacity: 1 !important;
+}
+
+.card-img {
+    object-fit: cover;
+}
+
+.user-img {
+    float: right;
+}
+
+.font-list {  
+    font-size: 15px;
+}
+
+.mission-header {
+    background-color: #8b6b61;
+    color: white;
+}
+
+.list-group-flush{
+    text-align: justify;
+}
+
+.kinal-img {
+    float: right;
+    margin-top: -30px;
+    position: relative;
+    margin-right: 20px;
+}

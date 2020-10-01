@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="magazines-list">
+        <div class="card header mt-3 pt-1 bg-info shadow-lg">
+            <h1 class="title text-center text-white">Magazines</h1>
+        </div>
+        <div class="container-fluid card justify-content-center mt-4 py-3 shadow-lg">
+            <table class="table table-responsive table-hover">
+                <thead class="thead-dark text-center">
+                    <tr class="">
+                        <th scope="col">#</th>
+                        <th scope="co l">Author</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Edition</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">CurrentFrequency</th>
+                        <th scope="col">Exemplars</th>
+                        <th scope="col">Keywords</th>
+                        <th scope="col">Themes</th>
+                        <th scope="col">Copies</th>
+                        <th scope="col">Available</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr *ngFor="let magazine of magazines; let i = index">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>{{ magazine.author }}</td>
+                        <td>{{ magazine.title }}</td>
+                        <td>{{ magazine.edition }}</td>
+                        <td>{{ magazine.description }}</td>
+                        <td>{{ magazine.currentFrequency }}</td>
+                        <td>{{ magazine.exemplars }}</td>
+                        <td>
+                            <ul class="keywords-ul">
+                                <li class="keywords-li" *ngFor="let keyword of magazine.keywords">{{keyword}}</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="keywords-ul">
+                                <li class="keywords-li" *ngFor="let theme of magazine.themes">{{theme}}</li>
+                            </ul>
+                        </td>
+                        <td>{{ magazine.copies }}</td>
+                        <td>{{ magazine.available }}</td>
+                        <td>
+                            <button class="btn btn-success btn-sm mr-1 mt-1"
+                                [routerLink]="['/magazines/request', magazine._id]">Request</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

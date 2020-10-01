@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="users-list">
+        <div class="card header mt-3 pt-1 bg-info shadow-lg">
+            <h1 class="title text-center text-white">USERS</h1>
+        </div>
+        <div class="container-fluid card justify-content-center mt-4 py-3 shadow-lg">
+            <table class="table table-responsive table-hover">
+                <thead class="thead-dark text-center">
+                    <tr class="">
+                        <th scope="col">#</th>
+                        <th scope="col">Student Code/CUI</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Lastname</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">CRUD</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr *ngFor="let user of users; let i = index">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>{{ user.studentCode_CUI }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.lastname }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.role }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm mr-1 mt-1" [routerLink]="['/users/view', user._id]">View</button>
+                            <button class="btn btn-warning btn-sm mr-1 mt-1" [routerLink]="['/users/update', user._id]">Update</button>
+                            <button class="btn btn-danger btn-sm mt-1" [routerLink]="['/users/delete', user._id]">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="shadow-lg add-button btn-circle">
+    <button class="btn btn-success btn-sm add-button btn-circle" data-toggle="tooltip" data-placement="top" title="button to add user" [routerLink]="['/users/add']">+</button>
+</div>
+

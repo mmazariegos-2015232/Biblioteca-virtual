@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div class="container-lg pt-5">
+    <div class="row">
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <form class="report-options" #reportOptionsForm="ngForm" (ngSubmit)="loadDataForChart()">
+                    <div class="card-body">
+                        <h2>MOST</h2>
+                        <div class="form-group">
+                            <label for="action" class="form-label">Report Type</label>
+                            <select type="text" id="action" name="action" #action="ngModel" [(ngModel)]="report.action"
+                                class="form-control" placeholder="Report Type">
+                                <option *ngFor="let reportType of reportTypes" [value]="reportType.type">
+                                    {{ reportType.type }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="object-type" class="form-label">Object Type</label>
+                            <select type="text" id="object-type" name="isBook" #isBook="ngModel" [(ngModel)]="report.isBook"
+                                class="form-control" placeholder="Object Type">
+                                <option *ngFor="let objectType of objectTypes" [value]="objectType.type == 'BOOK'">
+                                    {{ objectType.type }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="chart-type" class="form-label">Chart Type</label>
+                            <select type="text" id="chart-type" name="chart-type" #type="ngModel" [(ngModel)]="chart.type"
+                                class="form-control" placeholder="Chart Type">
+                                <option class="" *ngFor="let chartType of chartTypes" [value]="chartType.type">
+                                    {{ chartType.type | uppercase}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success btn d-block" type="submit">Generate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 mb-2" [ngClass]="classes.displayD">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <canvas baseChart 
+                                [data]="chartData"
+                                [labels]="chartLabels"
+                                [options]="chartOptions"
+                                [legend]="doughnutChartLegend"
+                                [chartType]="doughnutChartType">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" [ngClass]="classes.displayB">
+            <div class="card">
+                <div class="card-body">
+                    <div style="display: block">
+                        <canvas baseChart
+                                [data]="chartData"
+                                [labels]="chartLabels"
+                                [options]="chartOptions"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

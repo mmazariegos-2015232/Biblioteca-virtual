@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-5">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Add User</h5>
+                    <form class="form-add-user" #addUserForm="ngForm" (ngSubmit)="addUser()">
+                        <div class="form-group">
+                            <label for="studentCode_CUI" class="form-label">Student Code/CUI</label>
+                            <input type="text" id="studentCode_CUI" name="studentCode_CUI" #studentCode_CUI="ngModel"
+                                [(ngModel)]="user.studentCode_CUI" class="form-control" placeholder="Student code / CUI"
+                                required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="user.name"
+                                class="form-control" placeholder="Name" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="form-label">Lastname</label>
+                            <input type="text" id="lastname" name="lastname" #lastname="ngModel"
+                                [(ngModel)]="user.lastname" class="form-control" placeholder="Lastname" required
+                                autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" name="username" #username="ngModel"
+                                [(ngModel)]="user.username" class="form-control" placeholder="Username" required
+                                autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="user.email"
+                                class="form-control" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" #password="ngModel"
+                                [(ngModel)]="user.password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role" class="form-label">Role</label>
+                            <select type="text" id="role" name="role" [(ngModel)]="user.role" class="form-control"
+                                placeholder="Role">
+                                <option *ngFor="let roleEn of rolesEn; let i = index" [value]="roles[i]">
+                                    {{ roleEn.name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button class="btn btn-success btn-block" type="submit">Register</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-outline-secondary btn-block" routerLink="/users">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

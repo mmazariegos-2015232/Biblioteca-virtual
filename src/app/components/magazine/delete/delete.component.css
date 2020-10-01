@@ -1,0 +1,42 @@
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem;
+}
+
+.container {
+    margin: 0;
+    max-width: none;
+    background: #463c37;
+    /* background: linear-gradient(to right, #463c37, #ad7878); */
+    background: radial-gradient(circle, #ffffff, #aa8888, #4e463d, #110d0a);
+    min-height: 100vh;
+}
+
+.card-signin {
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.card-signin .card-img-left {
+    width: 45%;
+    /* Link to your background image using in the property below! */
+    background: scroll center;
+    background-image: url('http://localhost:4200/assets/img/view-magazine.jpg');
+    background-size: cover;
+}
+
+.card-signin .card-body {
+    padding: 2rem;
+}
+
+.form-signin {
+    width: 100%;
+}

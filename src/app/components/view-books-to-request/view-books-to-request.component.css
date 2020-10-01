@@ -1,0 +1,24 @@
+.title {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -.3px;
+}
+
+.table {
+    display: inline-table;
+    font-size: 12px;
+}
+
+.keywords-li {
+    list-style: none;
+}
+
+.keywords-ul {
+    padding-inline-start: 0 !important;
+}
+
+@media screen and (max-width: 1000px){
+    .table {
+        display: block;
+    }
+}

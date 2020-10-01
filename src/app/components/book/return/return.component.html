@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-5">
+                <div class="card-img-left d-none d-md-flex">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Return Book</h5>
+                    <form class="form-return-book" #returnBookForm="ngForm" (ngSubmit)="returnBook()">
+                        <div class="form-group">
+                            <label for="author" class="form-label">Author</label>
+                            <input disabled type="text" id="author" name="author" #author="ngModel" [(ngModel)]="book.author"
+                                class="form-control" placeholder="Author" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="form-label">Title</label>
+                            <input disabled type="text" id="title" name="title" #title="ngModel" [(ngModel)]="book.title"
+                                class="form-control" placeholder="Title" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="edition" class="form-label">Edition</label>
+                            <input disabled type="text" id="edition" name="edition" #edition="ngModel" [(ngModel)]="book.edition"
+                                class="form-control" placeholder="Edition" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="keywords" class="form-label">Keywords</label>
+                            <textarea disabled type="text" id="keywords" name="keywords" #keywords="ngModel"
+                                [(ngModel)]="keywordsStr.keywords" class="form-control"
+                                placeholder="Keywords separated by commas (,) " required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="form-label">Description</label>
+                            <input disabled type="text" id="description" name="description" #description="ngModel"
+                                [(ngModel)]="book.description" class="form-control" placeholder="Description" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="themes" class="form-label">Themes</label>
+                            <textarea disabled type="text" id="themes" name="themes" #themes="ngModel"
+                                [(ngModel)]="themesStr.themes" class="form-control"
+                                placeholder="Themes separated by commas (,) " required></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="copies" class="form-label">Copies</label>
+                                <input disabled type="number" id="copies" name="copies" #copies="ngModel"
+                                    [(ngModel)]="book.copies" class="form-control" placeholder="Copies" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="available" class="form-label">Availables</label>
+                                <input disabled type="number" id="available" name="available" #vailable="ngModel"
+                                    [(ngModel)]="book.available" class="form-control" placeholder="Availables" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button class="btn btn-danger btn-block" type="submit">Return</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-outline-secondary btn-block" routerLink="/users/books-return">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

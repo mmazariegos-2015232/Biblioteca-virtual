@@ -1,0 +1,31 @@
+.title {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -.3px;
+}
+
+.table {
+    display: inline-table;
+    font-size: 12px;
+}
+
+.add-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+@media screen and (max-width: 980px){
+    .table {
+        display: block;
+    }
+}

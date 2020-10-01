@@ -1,0 +1,43 @@
+.home-fomrat {
+    width: 100%;
+    background-color: rgba(221, 221, 221, 0.639);
+    height: 100%;
+}
+
+.format-menu {
+    align-content: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.format-menu {
+    align-content: center;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 6%;
+}
+.format-menu2 {
+    align-content: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+
+.img-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+
+:host {
+    background-image: url('http://localhost:4200/assets/img/library-background.jpg');
+}
+
+@media screen and (max-width: 1000px){
+    .home-fomrat {
+        display: block;
+    }
+}

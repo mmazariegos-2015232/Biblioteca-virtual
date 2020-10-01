@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-5">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Add Magazine</h5>
+                    <form class="form-add-magazine" #addUserForm="ngForm" (ngSubmit)="addMagazine()">
+                        <div class="form-group">
+                            <label for="author" class="form-label">Author</label>
+                            <input type="text" id="author" name="author" #studentCode_CUI="ngModel"
+                                [(ngModel)]="magazine.author" class="form-control" placeholder="Author" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" id="title" name="title" #name="ngModel" [(ngModel)]="magazine.title"
+                                class="form-control" placeholder="Title" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="edition" class="form-label">Edition</label>
+                            <input type="text" id="edition" name="edition" #lastname="ngModel"
+                                [(ngModel)]="magazine.edition" class="form-control" placeholder="Edition" required
+                                autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" id="description" name="description" #email="ngModel"
+                                [(ngModel)]="magazine.description" class="form-control" placeholder="Description" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="currentFrequency" class="form-label">Current frequency</label>
+                            <input type="text" id="currentFrequency" name="currentFrequency" #email="ngModel"
+                                [(ngModel)]="magazine.currentFrequency" class="form-control" placeholder="Current frequency" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exemplars" class="form-label">Exemplars</label>
+                            <input type="text" id="exemplars" name="exemplars" #email="ngModel"
+                                [(ngModel)]="magazine.exemplars" class="form-control" placeholder="Exemplars" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="themes" class="form-label">Themes</label>
+                            <textarea  type="text" id="themes" name="themes" #themes="ngModel" [(ngModel)]="themesStr.themes"
+                                class="form-control" placeholder="Themes separated by commas (,) " required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="keywords" class="form-label">Keywords</label>
+                            <textarea  type="text" id="keywords" name="keywords" #keywords="ngModel" [(ngModel)]="keywordsStr.keywords"
+                                class="form-control" placeholder="Keywords separated by commas (,) " required></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="copies" class="form-label">Copies</label>
+                                <input type="number" id="copies" name="copies" #password="ngModel"
+                                    [(ngModel)]="magazine.copies" class="form-control" placeholder="Copies" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="available" class="form-label">Availables</label>
+                                <input type="number" id="available" name="available" #password="ngModel"
+                                    [(ngModel)]="magazine.available" class="form-control" placeholder="Availables"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button class="btn btn-success btn-block" type="submit">Register</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-outline-secondary btn-block" routerLink="/magazines">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
